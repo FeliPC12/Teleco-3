@@ -1,0 +1,8 @@
+[main]
+dns-systemd-resolved
+
+#comandos para habilitarlos
+systemctl enable systemd-resolved
+systemctl start systemd-resolved
+systemctl restart NetworkManager
+resolvectl status

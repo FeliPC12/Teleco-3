@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .user-list {
+            margin-top: 20px;
+            list-style-type: none;
+        }
+        .user-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .user-item a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Tienda de Felipe</a>
+    <a href="/" class="btn btn-primary mr-2">Regresar a Usuarios</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div class="container">
+    <div class="form-container">
+        <h2>Agregue nuevo producto</h2>
+        <form id="add-product-form">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="costo">Costo</label>
+                <input type="number" class="form-control" id="costo" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad a llevar</label>
+                <input type="number" class="form-control" id="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso en (g)</label>
+                <input type="number" class="form-control" id="peso" required>
+            </div>
+            <button type="button" onclick="createProduct()">Crear Producto</button>
+        </form>
+    </div>
+
+    <h2>Listado de Productos</h2>
+    <table id="product-list" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Costo</th>
+                <th>Cantidad</th>
+                <th>Peso en (g)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+ </table>
+    <button type="button" onclick="getProducts()">Listar Productos</button>
+</div>
+
+<script src="static/scriptP.js"></script>
+</body>
+</html>
